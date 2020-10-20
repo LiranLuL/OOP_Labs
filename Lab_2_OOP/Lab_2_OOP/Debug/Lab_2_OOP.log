@@ -1,0 +1,6 @@
+﻿  Console_interactor.cpp
+C:\Users\Liran\source\repos\Lab_2_OOP\Lab_2_OOP\Console_interactor.cpp(36,20): warning C4244: 'initializing': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Liran\source\repos\Lab_2_OOP\Lab_2_OOP\Console_interactor.cpp(98,13): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Liran\source\repos\Lab_2_OOP\Lab_2_OOP\Console_interactor.cpp(105,13): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+C:\Users\Liran\source\repos\Lab_2_OOP\Lab_2_OOP\Console_interactor.cpp(112,13): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  Lab_2_OOP.vcxproj -> C:\Users\Liran\source\repos\Lab_2_OOP\Debug\Lab_2_OOP.exe
