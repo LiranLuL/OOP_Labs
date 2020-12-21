@@ -1,15 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Threading;
 
 namespace LAB_6_OOP
 {
@@ -21,16 +13,23 @@ namespace LAB_6_OOP
         string path2;
         public Markets(string ft, string fa, string st, string sa ,string path1,string path2,Start_form form)
         {
-            form1 = form;
-            market1 = new Market1(ft, fa);
-            market2 = new Market2(st, sa);
-            InitializeComponent();
-            street_label1.Text = ft;
-            street_label_1.Text = fa;
-            second_title.Text = st;
-            street_label2.Text = sa;
-            this.path1 = path1;
-            this.path2 = path2;
+            try
+            {
+                market1 = Markets_factory.Create_market(ft, fa, 1);
+                market2 = Markets_factory.Create_market(st, sa, 2);
+                form1 = form;
+                InitializeComponent();
+                first_title.Text = market1.title;
+                first_street_label.Text = market1.address;
+                second_title.Text = market2.title;
+                second_street_label.Text = market2.address;
+                this.path1 = path1;
+                this.path2 = path2;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+            }
         }
 
         private void Update_list(ListBox list,Supermarket market)
@@ -41,9 +40,8 @@ namespace LAB_6_OOP
                 list.Items.Add(keyValue.Key + "   " + keyValue.Value.how);
             }
         }
-        
 
-private void end_prog_button_MouseEnter(object sender, EventArgs e)
+        private void end_prog_button_MouseEnter(object sender, EventArgs e)
         {
             end_prog_button.BackColor = Color.Red;
             end_prog_button.ForeColor = Color.Black;
@@ -86,8 +84,8 @@ private void end_prog_button_MouseEnter(object sender, EventArgs e)
                     Update_revenue(product_title, shop_revenue, market, buy_count);
 
                     var prod = Create_product(market, product_title, buy_count, count - int.Parse(buy_count.Text));
-
                     market.items[key: product_title.Text] = prod;
+
                     Replace_by_index(product_title.Text, prod, product_list, product_title);
                 }
             }
@@ -98,9 +96,9 @@ private void end_prog_button_MouseEnter(object sender, EventArgs e)
             if (flag)
             {
                 product_title_1.Text = product_title_1.Text.ToLower();
-                if (market1.items.ContainsKey(product_title_1.Text.ToLower()))
+                if (market1.items.ContainsKey(product_title_1.Text))
                 {
-                    int count = market1.items[product_title_1.Text.ToLower()].how_remain;
+                    int count = market1.items[product_title_1.Text].how_remain;
                     if (count < int.Parse(buy_count_1.Text))
                     {
                         MessageBox.Show("В магазине недостаточно товара, попробуйте ещё раз");
@@ -190,8 +188,7 @@ private void end_prog_button_MouseEnter(object sender, EventArgs e)
                 {
                     Console.WriteLine("Exception: " + ex.Message);
                     MessageBox.Show("В дириктории отсутсвует файл");
-                    this.Close();
-                    form1.Close();
+                    Application.Exit();
                 }
             }
         }

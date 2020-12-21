@@ -632,40 +632,40 @@
   <data name="&gt;&gt;end_prog_button.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="street_label1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="first_title.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 17pt, style=Bold</value>
   </data>
-  <data name="street_label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="first_title.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="street_label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="first_title.Location" type="System.Drawing.Point, System.Drawing">
     <value>65, 181</value>
   </data>
-  <data name="street_label1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="first_title.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 40</value>
   </data>
-  <data name="street_label1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="first_title.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 40</value>
   </data>
-  <data name="street_label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="first_title.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 40</value>
   </data>
-  <data name="street_label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="first_title.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
-  <data name="street_label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="first_title.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;street_label1.Name" xml:space="preserve">
-    <value>street_label1</value>
+  <data name="&gt;&gt;first_title.Name" xml:space="preserve">
+    <value>first_title</value>
   </data>
-  <data name="&gt;&gt;street_label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;first_title.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;street_label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;first_title.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;street_label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;first_title.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="second_title.Font" type="System.Drawing.Font, System.Drawing">
@@ -830,58 +830,58 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="street_label_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="first_street_label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="street_label_1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="first_street_label.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 254</value>
   </data>
-  <data name="street_label_1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="first_street_label.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 26</value>
   </data>
-  <data name="street_label_1.TabIndex" type="System.Int32, mscorlib">
+  <data name="first_street_label.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="street_label_1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="first_street_label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;street_label_1.Name" xml:space="preserve">
-    <value>street_label_1</value>
+  <data name="&gt;&gt;first_street_label.Name" xml:space="preserve">
+    <value>first_street_label</value>
   </data>
-  <data name="&gt;&gt;street_label_1.Type" xml:space="preserve">
+  <data name="&gt;&gt;first_street_label.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;street_label_1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;first_street_label.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;street_label_1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;first_street_label.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="street_label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="second_street_label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="street_label2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="second_street_label.Location" type="System.Drawing.Point, System.Drawing">
     <value>1091, 254</value>
   </data>
-  <data name="street_label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="second_street_label.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 26</value>
   </data>
-  <data name="street_label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="second_street_label.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="street_label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="second_street_label.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;street_label2.Name" xml:space="preserve">
-    <value>street_label2</value>
+  <data name="&gt;&gt;second_street_label.Name" xml:space="preserve">
+    <value>second_street_label</value>
   </data>
-  <data name="&gt;&gt;street_label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;second_street_label.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;street_label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;second_street_label.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;street_label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;second_street_label.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

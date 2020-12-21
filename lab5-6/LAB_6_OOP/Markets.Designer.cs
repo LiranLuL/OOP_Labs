@@ -50,14 +50,14 @@ namespace LAB_6_OOP
             this.first_label = new System.Windows.Forms.Label();
             this.second_label = new System.Windows.Forms.Label();
             this.end_prog_button = new System.Windows.Forms.Button();
-            this.street_label1 = new System.Windows.Forms.Label();
+            this.first_title = new System.Windows.Forms.Label();
             this.second_title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.street_label_1 = new System.Windows.Forms.Label();
-            this.street_label2 = new System.Windows.Forms.Label();
+            this.first_street_label = new System.Windows.Forms.Label();
+            this.second_street_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -188,12 +188,12 @@ namespace LAB_6_OOP
             this.end_prog_button.MouseLeave += new System.EventHandler(this.end_prog_button_MouseLeave);
             this.end_prog_button.MouseHover += new System.EventHandler(this.end_prog_button_MouseEnter);
             // 
-            // street_label1
+            // first_title
             // 
-            this.street_label1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.street_label1, "street_label1");
-            this.street_label1.Name = "street_label1";
-            this.street_label1.Click += new System.EventHandler(this.first_title_Click);
+            this.first_title.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.first_title, "first_title");
+            this.first_title.Name = "first_title";
+            this.first_title.Click += new System.EventHandler(this.first_title_Click);
             // 
             // second_title
             // 
@@ -222,31 +222,31 @@ namespace LAB_6_OOP
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
             // 
-            // street_label_1
+            // first_street_label
             // 
-            this.street_label_1.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.street_label_1, "street_label_1");
-            this.street_label_1.Name = "street_label_1";
+            this.first_street_label.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.first_street_label, "first_street_label");
+            this.first_street_label.Name = "first_street_label";
             // 
-            // street_label2
+            // second_street_label
             // 
-            this.street_label2.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.street_label2, "street_label2");
-            this.street_label2.Name = "street_label2";
+            this.second_street_label.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.second_street_label, "second_street_label");
+            this.second_street_label.Name = "second_street_label";
             // 
             // Markets
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Controls.Add(this.street_label2);
-            this.Controls.Add(this.street_label_1);
+            this.Controls.Add(this.second_street_label);
+            this.Controls.Add(this.first_street_label);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.second_title);
-            this.Controls.Add(this.street_label1);
+            this.Controls.Add(this.first_title);
             this.Controls.Add(this.end_prog_button);
             this.Controls.Add(this.second_label);
             this.Controls.Add(this.first_label);
@@ -282,8 +282,8 @@ namespace LAB_6_OOP
         private System.Windows.Forms.Button buy_button1;
         private System.Windows.Forms.Label shop_revenue_2;
         private System.Windows.Forms.ListBox product_list_1;
-        private Market1 market1;
-        private Market2 market2;
+        private Supermarket market1;
+        private Supermarket market2;
         private System.Windows.Forms.ListBox product_list_2;
         private System.Windows.Forms.Button read_file_button;
         private System.Windows.Forms.TextBox product_title_1;
@@ -296,14 +296,14 @@ namespace LAB_6_OOP
         private System.Windows.Forms.Label first_label;
         private System.Windows.Forms.Label second_label;
         private System.Windows.Forms.Button end_prog_button;
-        private System.Windows.Forms.Label street_label1;
+        private System.Windows.Forms.Label first_title;
         private System.Windows.Forms.Label second_title;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private Label street_label_1;
-        private Label street_label2;
+        private Label first_street_label;
+        private Label second_street_label;
     }
 }
 

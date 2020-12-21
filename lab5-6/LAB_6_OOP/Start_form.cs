@@ -18,13 +18,20 @@ namespace LAB_6_OOP
         }
         public void button1_Click(object sender, EventArgs e)
         {
-            Markets newForm = new Markets(first_title.Text, first_address.Text, 
-                second_title.Text, second_address.Text, 
-                path1.Text,
-                path2.Text,
-                this);
-            newForm.Show();
-            this.Hide();
+            if (!(path1.Text == "" || path2.Text == ""))
+            {
+                Markets newForm = new Markets(first_title.Text, first_address.Text,
+                    second_title.Text, second_address.Text,
+                    path1.Text,
+                    path2.Text,
+                    this);
+                newForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Попробуйте ввести название файла");
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)

@@ -8,6 +8,8 @@ namespace LAB_6_OOP
 {
     class Market2 : Supermarket
     {
+        public Market2() : base("Пятерочка", "ул.Ленина")
+        { }
         public Market2(string title, string address) : base(title, address)
         { }
     }
