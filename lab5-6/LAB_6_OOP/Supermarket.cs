@@ -18,9 +18,5 @@ namespace LAB_6_OOP
             this.title = title;
             this.address = address;
         }
-        protected virtual void Buy_item(string product, int how)
-        {
-
-        }
     }
 }

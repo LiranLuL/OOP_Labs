@@ -22,17 +22,18 @@ namespace LAB_6_OOP
                         throw new Exception("Не удалось создать объект");
                 }
             }
-
-            switch (key)
+            else
             {
-                case 1:
-                    return new Market1(title, address);
-                case 2:
-                    return new Market2(title, address);
-                default:
-                    throw new Exception("Не удалось создать объект");
+                switch (key)
+                {
+                    case 1:
+                        return new Market1(title, address);
+                    case 2:
+                        return new Market2(title, address);
+                    default:
+                        throw new Exception("Не удалось создать объект");
+                }
             }
-
         }
     }
 }

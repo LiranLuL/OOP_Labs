@@ -9,7 +9,7 @@ namespace LAB_6_OOP
 {
     class Parser
     {
-        public void Parse_file(Supermarket market,string path)
+        public void Parse_file(Supermarket market, string path)
         {
             string[] items;
             string[] split;

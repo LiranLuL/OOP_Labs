@@ -266,7 +266,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 800);
             this.Name = "Start_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Start form";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

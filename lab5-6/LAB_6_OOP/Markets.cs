@@ -11,7 +11,7 @@ namespace LAB_6_OOP
         private Start_form form1;
         string path1;
         string path2;
-        public Markets(string ft, string fa, string st, string sa ,string path1,string path2,Start_form form)
+        public Markets(string ft, string fa, string st, string sa, string path1, string path2, Start_form form)
         {
             try
             {
@@ -26,18 +26,19 @@ namespace LAB_6_OOP
                 this.path1 = path1;
                 this.path2 = path2;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Exception: " + ex.Message);
             }
         }
 
-        private void Update_list(ListBox list,Supermarket market)
+
+        private void Update_list(ListBox list, Supermarket market)
         {
             list.Items.Clear();
             foreach (KeyValuePair<string, Product_info> keyValue in market.items)
             {
-                list.Items.Add(keyValue.Key + "   " + keyValue.Value.how);
+                list.Items.Add(keyValue.Key + "   " + keyValue.Value.how_remain);
             }
         }
 
@@ -70,25 +71,11 @@ namespace LAB_6_OOP
             this.Close();
         }
 
-        private void Buy_item(Supermarket market,TextBox product_title,TextBox buy_count, ListBox product_list,Label shop_revenue)
+        private void Replace_by_index(string index, int how_remain, ListBox product_list, string product_title)
         {
-            if (flag)
-            {
-                int count = market.items[product_title.Text].how_remain;
-                if (count < int.Parse(buy_count.Text))
-                {
-                    MessageBox.Show("В магазине недостаточно товара, попробуйте ещё раз");
-                }
-                else
-                {
-                    Update_revenue(product_title, shop_revenue, market, buy_count);
-
-                    var prod = Create_product(market, product_title, buy_count, count - int.Parse(buy_count.Text));
-                    market.items[key: product_title.Text] = prod;
-
-                    Replace_by_index(product_title.Text, prod, product_list, product_title);
-                }
-            }
+            int i = product_list.FindString(index);
+            product_list.Items.RemoveAt(i);
+            product_list.Items.Insert(i, product_title + "   " + how_remain);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,7 +92,10 @@ namespace LAB_6_OOP
                     }
                     else
                     {
-                        Buy_item(market1, product_title_1, buy_count_1, product_list_1, shop_revenue_1);
+                        market1.casher.Buy_item(market1, product_title_1.Text, buy_count_1.Text);
+                        Replace_by_index(product_title_1.Text, market1.items[product_title_1.Text].how_remain, product_list_1, product_title_1.Text);
+                        Update_revenue(shop_revenue_1, int.Parse(buy_count_1.Text), market1.items[product_title_1.Text].price);
+                        Update_list(product_list_1, market1);
                     }
                 }
                 else
@@ -133,7 +123,10 @@ namespace LAB_6_OOP
                     }
                     else
                     {
-                        Buy_item(market2, product_title_2, buy_count_2, product_list_2, shop_revenue_2);
+                        market2.casher.Buy_item(market2, product_title_2.Text, buy_count_2.Text);
+                        Replace_by_index(product_title_2.Text, market2.items[product_title_2.Text].how_remain, product_list_2, product_title_2.Text);
+                        Update_revenue(shop_revenue_2, int.Parse(buy_count_2.Text), market2.items[product_title_2.Text].price);
+                        Update_list(product_list_2, market2);
                     }
                 }
                 else
@@ -147,29 +140,16 @@ namespace LAB_6_OOP
             }
         }
 
-        private Product_info Create_product(Supermarket market, TextBox product_title, TextBox buy_count, int how_remain)
-        {
-            var product = new Product_info(
-                       market.items[product_title.Text].price,
-                       market.items[product_title.Text].how,
-                       how_remain
-                       );
-            return product;
-        }
 
-        private void Update_revenue(TextBox product_title,Label label,Supermarket market,TextBox buy_count)
+
+        private void Update_revenue(Label label, int buy_count, int price)
         {
             int temp = int.Parse(label.Text);
-            temp += int.Parse(buy_count.Text) * market.items[product_title.Text].price;
+            temp += buy_count * price;
             label.Text = temp.ToString();
         }
 
-        private void Replace_by_index(string index, Product_info prod,ListBox product_list,TextBox product_title)
-        {
-            int i = product_list.FindString(index);
-            product_list.Items.RemoveAt(i);
-            product_list.Items.Insert(i, product_title.Text + "   " + prod.how_remain);
-        }
+
 
         private void Read_file_Click(object sender, EventArgs e)
         {
@@ -221,7 +201,7 @@ namespace LAB_6_OOP
         }
         private void Markets_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
         }
 
         private void Markets_Load(object sender, EventArgs e)
@@ -250,7 +230,7 @@ namespace LAB_6_OOP
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
